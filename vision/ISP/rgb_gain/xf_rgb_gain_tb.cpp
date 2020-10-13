@@ -5,6 +5,9 @@
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+#include<vector>
+//using namespace cv;
+using namespace std;
 
 int main(int argc, char** argv)
 {
@@ -52,9 +55,9 @@ int main(int argc, char** argv)
     	{
     		//Rimg.at<cv::Vec3b>(j,i)[0] = (unsigned char)((float)Rimg.at<cv::Vec3b>(j,i)[0]*rg);
     		//Rimg.at<cv::Vec3b>(j,i)[0] = 0;
-    		r_result = Rimg.at<unsigned char>(j,i)*rg;
-    		g_result = Gimg.at<unsigned char>(j,i)*gg;
-    		b_result = Bimg.at<unsigned char>(j,i)*bg;
+    		r_result = Rimg.at<unsigned char>(j,i)+rg;
+    		g_result = Gimg.at<unsigned char>(j,i)+gg;
+    		b_result = Bimg.at<unsigned char>(j,i)+bg;
     		Rimg.at<unsigned char>(j,i) = r_result;
     		Gimg.at<unsigned char>(j,i) = g_result;
     		Bimg.at<unsigned char>(j,i) = b_result;

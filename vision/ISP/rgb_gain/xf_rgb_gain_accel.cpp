@@ -57,7 +57,7 @@ void mat_combin_rgb( float r_gain, float g_gain, float b_gain,
                 rf = (float) r(i * 8 + 7, i * 8);
                 //printf("<Executable Name> <input image path> y=%0d \n",y);
                 dout(23 + i*24, i * 24)=
-                    (ap_uint<8>(bf * bg),ap_uint<8>(gf * gg),ap_uint<8>(rf * rg));
+                    (ap_uint<8>(bf + bg),ap_uint<8>(gf + gg),ap_uint<8>(rf + rg));
             }
             _dest.write((x * (_dest.cols >> XF_BITSHIFT(NPC)) + y), dout);
         }    
