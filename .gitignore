@@ -1,4 +1,4 @@
 /vision/ISP/rgb_gain/*.bak
-/vision/ISP/rgb_gain/*.log
+/vision/ISP/rgb_gain/vivado_hls.log
 /vision/ISP/rgb_gain/rgb_gain/*
 /vision/L2/*

@@ -70,18 +70,18 @@ void rgb_gain_accel(xf::cv::Mat<XF_8UC3,HEIGHT,WIDTH,NPC> &rgb_img,
                     float g_gain,
                     float b_gain)
 {
-//#pragma HLS INTERFACE axis register both port=rgb_img_gain
-//#pragma HLS INTERFACE axis register both port=rgb_img
+#pragma HLS INTERFACE axis register both port=rgb_img_gain
+#pragma HLS INTERFACE axis register both port=rgb_img
 
 //#pragma HLS INTERFACE m_axi depth=256 port=rgb_img
 //#pragma HLS INTERFACE m_axi depth=256 port=rgb_img_gain
 //#pragma HLS INTERFACE m_axi depth=2 port=rgb_img
     //
-    xf::cv::Mat<XF_8UC1, HEIGHT, WIDTH,NPC> out_r(rgb_img.rows,rgb_img.cols);
+    xf::cv::Mat<XF_8UC1, HEIGHT, WIDTH,NPC> out_r(HEIGHT, WIDTH);
 #pragma HLS STREAM variable=out_r depth=2
-    xf::cv::Mat<XF_8UC1, HEIGHT, WIDTH,NPC> out_g(rgb_img.rows,rgb_img.cols);
+    xf::cv::Mat<XF_8UC1, HEIGHT, WIDTH,NPC> out_g(HEIGHT, WIDTH);
 #pragma HLS STREAM variable=out_g depth=2
-    xf::cv::Mat<XF_8UC1, HEIGHT, WIDTH,NPC> out_b(rgb_img.rows,rgb_img.cols);
+    xf::cv::Mat<XF_8UC1, HEIGHT, WIDTH,NPC> out_b(HEIGHT, WIDTH);
 #pragma HLS STREAM variable=out_b depth=2
 #pragma HLS DATAFLOW
     //
