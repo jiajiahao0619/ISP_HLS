@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="yuv_auto_control.cpp" path="D:\github\xfopencv\HLS_Use_Model\yuv_auto_control\yuv_auto_control.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="yuv_auto_control.cpp" path="D:\github\xfopencv\HLS_Use_Model\yuv_auto_control\yuv_auto_control.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

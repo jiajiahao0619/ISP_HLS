@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] yuv_auto_control.cpp:4:9: fatal error: 'opencv2/opencv.hpp' file not found&#xD;&#xA;#include&lt;opencv2/opencv.hpp>&#xD;&#xA;        ^&#xD;&#xA;1 error generated.&#xD;&#xA;C preprocessor failed.&#xD;&#xA;    while executing&#xD;&#xA;&quot;source D:/github/xfopencv/HLS_Use_Model/yuv_auto_control/yuv_auto/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main D:/github/xfopencv/HLS_Use_Model/yuv_auto_control/yuv_auto/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="yuv_auto" solutionName="solution1" date="2020-10-01T23:15:19.430+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
