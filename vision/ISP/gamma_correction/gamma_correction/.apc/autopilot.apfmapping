@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="xf_gammacorrection_accel.cpp" path="D:\github\ISP_HLS\vision\ISP\gamma_correction\xf_gammacorrection_accel.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="128x128.png" path="D:\github\ISP_HLS\vision\ISP\gamma_correction\data\128x128.png"/>
+    <originFiles name="ref_Y.png" path="D:\github\ISP_HLS\vision\ISP\gamma_correction\data\ref_Y.png"/>
+    <originFiles name="xf_gammacorrection_config.h" path="D:\github\ISP_HLS\vision\ISP\gamma_correction\xf_gammacorrection_config.h"/>
+    <originFiles name="xf_gammacorrection_tb.cpp" path="D:\github\ISP_HLS\vision\ISP\gamma_correction\xf_gammacorrection_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

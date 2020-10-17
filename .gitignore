@@ -2,3 +2,11 @@
 /vision/ISP/rgb_gain/vivado_hls.log
 /vision/ISP/rgb_gain/rgb_gain/*
 /vision/L2/*
+/vision/ISP/gamma_correction/gamma_correction/soluti*/.autopilot/*
+/vision/ISP/gamma_correction/gamma_correction/soluti*/impl/*
+/vision/ISP/gamma_correction/gamma_correction/soluti*/syn/*
+/vision/ISP/gamma_correction/gamma_correction/soluti*/csim/*
+/vision/ISP/gamma_correction/*.bak
+/vision/ISP/gamma_correction/*.log
+
+
