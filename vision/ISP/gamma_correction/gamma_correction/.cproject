@@ -57,8 +57,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="D:/github/ISP_HLS/vision/L1/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="D:/github/ISP_HLS/vision/ISP/gamma_correction"/>
-                                    									
                                     <listOptionValue builtIn="false" value="E:/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
                                     <listOptionValue builtIn="false" value="E:/Xilinx/Vivado/2019.2/include/ap_sysc"/>
@@ -94,8 +92,6 @@
                                     <listOptionValue builtIn="false" value="E:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="D:/github/ISP_HLS/vision/L1/include"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="D:/github/ISP_HLS/vision/ISP/gamma_correction"/>
                                     									
                                     <listOptionValue builtIn="false" value="E:/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
@@ -311,8 +307,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="D:/github/ISP_HLS/vision/L1/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="D:/github/ISP_HLS/vision/ISP/gamma_correction"/>
-                                    									
                                     <listOptionValue builtIn="false" value="E:/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
                                     <listOptionValue builtIn="false" value="E:/Xilinx/Vivado/2019.2/include/ap_sysc"/>
@@ -338,8 +332,6 @@
                                     <listOptionValue builtIn="false" value="E:/Xilinx/Vivado/2019.2/win64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="D:/github/ISP_HLS/vision/L1/include"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="D:/github/ISP_HLS/vision/ISP/gamma_correction"/>
                                     									
                                     <listOptionValue builtIn="false" value="E:/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
