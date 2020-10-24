@@ -1,0 +1,1206 @@
+{
+  "Top": "sat_ctrl_accel",
+  "RtlTop": "sat_ctrl_accel",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "0",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu7ev",
+    "Package": "-ffvc1156",
+    "Speed": "-2-e"
+  },
+  "HlsSolution": {
+    
+  },
+  "Args": {
+    "U": {
+      "index": "0",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "xf::cv::Mat<0, 1080, 1920, 1>",
+        "structImpl": "flat-interface",
+        "fields": {
+          "allocatedFlag": {
+            "order": "0",
+            "dataType": "unsigned",
+            "dataWidth": "8",
+            "interfaceRef": "U_allocatedFlag",
+            "structImpl": "field"
+          },
+          "rows": {
+            "order": "1",
+            "dataType": "int",
+            "dataWidth": "32",
+            "interfaceRef": "U_rows",
+            "structImpl": "field"
+          },
+          "cols": {
+            "order": "2",
+            "dataType": "int",
+            "dataWidth": "32",
+            "interfaceRef": "U_cols",
+            "structImpl": "field"
+          },
+          "size": {
+            "order": "3",
+            "dataType": "int",
+            "dataWidth": "32",
+            "interfaceRef": "U_size",
+            "structImpl": "field"
+          },
+          "data": {
+            "order": "4",
+            "kinds": ["array"],
+            "dataType": "ap_uint",
+            "dataWidth": "8",
+            "arraySizes": ["2073600"],
+            "multiInterfaceRef": [
+              "U_data_V_address0",
+              "U_data_V_address1",
+              "U_data_V_d0",
+              "U_data_V_d1",
+              "U_data_V_q0",
+              "U_data_V_q1"
+            ],
+            "structImpl": "interface"
+          }
+        }
+      }
+    },
+    "V": {
+      "index": "1",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "xf::cv::Mat<0, 1080, 1920, 1>",
+        "structImpl": "flat-interface",
+        "fields": {
+          "allocatedFlag": {
+            "order": "0",
+            "dataType": "unsigned",
+            "dataWidth": "8",
+            "interfaceRef": "V_allocatedFlag",
+            "structImpl": "field"
+          },
+          "rows": {
+            "order": "1",
+            "dataType": "int",
+            "dataWidth": "32",
+            "interfaceRef": "V_rows",
+            "structImpl": "field"
+          },
+          "cols": {
+            "order": "2",
+            "dataType": "int",
+            "dataWidth": "32",
+            "interfaceRef": "V_cols",
+            "structImpl": "field"
+          },
+          "size": {
+            "order": "3",
+            "dataType": "int",
+            "dataWidth": "32",
+            "interfaceRef": "V_size",
+            "structImpl": "field"
+          },
+          "data": {
+            "order": "4",
+            "kinds": ["array"],
+            "dataType": "ap_uint",
+            "dataWidth": "8",
+            "arraySizes": ["2073600"],
+            "multiInterfaceRef": [
+              "V_data_V_address0",
+              "V_data_V_address1",
+              "V_data_V_d0",
+              "V_data_V_d1",
+              "V_data_V_q0",
+              "V_data_V_q1"
+            ],
+            "structImpl": "interface"
+          }
+        }
+      }
+    },
+    "UV": {
+      "index": "2",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "xf::cv::Mat<6, 1080, 1920, 1>",
+        "structImpl": "flat-interface",
+        "fields": {
+          "allocatedFlag": {
+            "order": "0",
+            "dataType": "unsigned",
+            "dataWidth": "8",
+            "interfaceRef": "UV_allocatedFlag",
+            "structImpl": "field"
+          },
+          "rows": {
+            "order": "1",
+            "dataType": "int",
+            "dataWidth": "32",
+            "interfaceRef": "UV_rows",
+            "structImpl": "field"
+          },
+          "cols": {
+            "order": "2",
+            "dataType": "int",
+            "dataWidth": "32",
+            "interfaceRef": "UV_cols",
+            "structImpl": "field"
+          },
+          "size": {
+            "order": "3",
+            "dataType": "int",
+            "dataWidth": "32",
+            "interfaceRef": "UV_size",
+            "structImpl": "field"
+          },
+          "data": {
+            "order": "4",
+            "kinds": ["array"],
+            "dataType": "ap_uint",
+            "dataWidth": "16",
+            "arraySizes": ["2073600"],
+            "multiInterfaceRef": [
+              "UV_data_V_address0",
+              "UV_data_V_address1",
+              "UV_data_V_d0",
+              "UV_data_V_d1",
+              "UV_data_V_q0",
+              "UV_data_V_q1"
+            ],
+            "structImpl": "interface"
+          }
+        }
+      }
+    },
+    "mode": {
+      "index": "3",
+      "type": {
+        "dataType": "unsigned",
+        "dataWidth": "8",
+        "interfaceRef": "mode"
+      }
+    },
+    "sat": {
+      "index": "4",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "sat"
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "undef",
+    "Uncertainty": "1.25"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "sat_ctrl_accel",
+    "Version": "1.0",
+    "DisplayName": "Sat_ctrl_accel",
+    "Revision": "",
+    "Description": "An IP generated by Vivado HLS",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/..\/xf_sat_ctrl_accel.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/convertTo.vhd",
+      "impl\/vhdl\/fifo_w8_d2073600_A.vhd",
+      "impl\/vhdl\/fifo_w10_d2073600_A.vhd",
+      "impl\/vhdl\/fifo_w32_d2_A.vhd",
+      "impl\/vhdl\/Loop_1_proc.vhd",
+      "impl\/vhdl\/mat_combine_uv.vhd",
+      "impl\/vhdl\/meanStdDev.vhd",
+      "impl\/vhdl\/sat_ctrl_accel_entry_1.vhd",
+      "impl\/vhdl\/sat_ctrl_accel_entry_1_1.vhd",
+      "impl\/vhdl\/sat_ctrl_accel_mabkb.vhd",
+      "impl\/vhdl\/start_for_convertfYi.vhd",
+      "impl\/vhdl\/start_for_mat_comdEe.vhd",
+      "impl\/vhdl\/start_for_meanStdg8j.vhd",
+      "impl\/vhdl\/start_for_sat_ctrcud.vhd",
+      "impl\/vhdl\/start_for_xFMagnieOg.vhd",
+      "impl\/vhdl\/xFMagnitudeKernel.vhd",
+      "impl\/vhdl\/sat_ctrl_accel.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/convertTo.v",
+      "impl\/verilog\/fifo_w8_d2073600_A.v",
+      "impl\/verilog\/fifo_w10_d2073600_A.v",
+      "impl\/verilog\/fifo_w32_d2_A.v",
+      "impl\/verilog\/Loop_1_proc.v",
+      "impl\/verilog\/mat_combine_uv.v",
+      "impl\/verilog\/meanStdDev.v",
+      "impl\/verilog\/sat_ctrl_accel_entry_1.v",
+      "impl\/verilog\/sat_ctrl_accel_entry_1_1.v",
+      "impl\/verilog\/sat_ctrl_accel_mabkb.v",
+      "impl\/verilog\/start_for_convertfYi.v",
+      "impl\/verilog\/start_for_mat_comdEe.v",
+      "impl\/verilog\/start_for_meanStdg8j.v",
+      "impl\/verilog\/start_for_sat_ctrcud.v",
+      "impl\/verilog\/start_for_xFMagnieOg.v",
+      "impl\/verilog\/xFMagnitudeKernel.v",
+      "impl\/verilog\/sat_ctrl_accel.v"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "D:\/github\/ISP_HLS\/vision\/ISP\/sat_ctrl\/sat_ctrl\/solution1\/.autopilot\/db\/sat_ctrl_accel.design.xml",
+    "DebugDir": "D:\/github\/ISP_HLS\/vision\/ISP\/sat_ctrl\/sat_ctrl\/solution1\/.debug",
+    "ProtoInst": ["D:\/github\/ISP_HLS\/vision\/ISP\/sat_ctrl\/sat_ctrl\/solution1\/.debug\/sat_ctrl_accel.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "reset": "ap_rst"
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "ctrl_ports": "ap_start ap_done ap_ready ap_idle",
+      "ctype": {
+        "start": {"Type": "bool"},
+        "done": {"Type": "bool"},
+        "ready": {"Type": "bool"},
+        "idle": {"Type": "bool"}
+      }
+    },
+    "ap_rst": {
+      "type": "reset",
+      "polarity": "ACTIVE_HIGH",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst",
+      "bundle_role": "default"
+    },
+    "mode": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "mode",
+      "bundle_role": "default"
+    },
+    "sat": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }},
+      "bundle_name": "sat",
+      "bundle_role": "default"
+    },
+    "U_allocatedFlag": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "U_allocatedFlag",
+      "bundle_role": "default"
+    },
+    "U_cols": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }},
+      "bundle_name": "U_cols",
+      "bundle_role": "default"
+    },
+    "U_data_V_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "21",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "21"
+        }},
+      "bundle_name": "U_data_V",
+      "bundle_role": "address0"
+    },
+    "U_data_V_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "21",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "21"
+        }},
+      "bundle_name": "U_data_V",
+      "bundle_role": "address1"
+    },
+    "U_data_V_d0": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "U_data_V",
+      "bundle_role": "d0"
+    },
+    "U_data_V_d1": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "U_data_V",
+      "bundle_role": "d1"
+    },
+    "U_data_V_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "U_data_V",
+      "bundle_role": "q0"
+    },
+    "U_data_V_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "U_data_V",
+      "bundle_role": "q1"
+    },
+    "U_rows": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }},
+      "bundle_name": "U_rows",
+      "bundle_role": "default"
+    },
+    "U_size": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }},
+      "bundle_name": "U_size",
+      "bundle_role": "default"
+    },
+    "UV_allocatedFlag": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "UV_allocatedFlag",
+      "bundle_role": "default"
+    },
+    "UV_cols": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }},
+      "bundle_name": "UV_cols",
+      "bundle_role": "default"
+    },
+    "UV_data_V_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "21",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "21"
+        }},
+      "bundle_name": "UV_data_V",
+      "bundle_role": "address0"
+    },
+    "UV_data_V_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "21",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "21"
+        }},
+      "bundle_name": "UV_data_V",
+      "bundle_role": "address1"
+    },
+    "UV_data_V_d0": {
+      "type": "data",
+      "dir": "out",
+      "width": "16",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "16"
+        }},
+      "bundle_name": "UV_data_V",
+      "bundle_role": "d0"
+    },
+    "UV_data_V_d1": {
+      "type": "data",
+      "dir": "out",
+      "width": "16",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "16"
+        }},
+      "bundle_name": "UV_data_V",
+      "bundle_role": "d1"
+    },
+    "UV_data_V_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "16",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "16"
+        }},
+      "bundle_name": "UV_data_V",
+      "bundle_role": "q0"
+    },
+    "UV_data_V_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "16",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "16"
+        }},
+      "bundle_name": "UV_data_V",
+      "bundle_role": "q1"
+    },
+    "UV_rows": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }},
+      "bundle_name": "UV_rows",
+      "bundle_role": "default"
+    },
+    "UV_size": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }},
+      "bundle_name": "UV_size",
+      "bundle_role": "default"
+    },
+    "V_allocatedFlag": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "V_allocatedFlag",
+      "bundle_role": "default"
+    },
+    "V_cols": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }},
+      "bundle_name": "V_cols",
+      "bundle_role": "default"
+    },
+    "V_data_V_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "21",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "21"
+        }},
+      "bundle_name": "V_data_V",
+      "bundle_role": "address0"
+    },
+    "V_data_V_address1": {
+      "type": "data",
+      "dir": "out",
+      "width": "21",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "21"
+        }},
+      "bundle_name": "V_data_V",
+      "bundle_role": "address1"
+    },
+    "V_data_V_d0": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "V_data_V",
+      "bundle_role": "d0"
+    },
+    "V_data_V_d1": {
+      "type": "data",
+      "dir": "out",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "V_data_V",
+      "bundle_role": "d1"
+    },
+    "V_data_V_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "V_data_V",
+      "bundle_role": "q0"
+    },
+    "V_data_V_q1": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }},
+      "bundle_name": "V_data_V",
+      "bundle_role": "q1"
+    },
+    "V_rows": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }},
+      "bundle_name": "V_rows",
+      "bundle_role": "default"
+    },
+    "V_size": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }},
+      "bundle_name": "V_size",
+      "bundle_role": "default"
+    }
+  },
+  "RtlPorts": {
+    "U_allocatedFlag": {
+      "dir": "in",
+      "width": "8"
+    },
+    "U_rows": {
+      "dir": "in",
+      "width": "32"
+    },
+    "U_cols": {
+      "dir": "in",
+      "width": "32"
+    },
+    "U_size": {
+      "dir": "in",
+      "width": "32"
+    },
+    "U_data_V_address0": {
+      "dir": "out",
+      "width": "21"
+    },
+    "U_data_V_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "U_data_V_d0": {
+      "dir": "out",
+      "width": "8"
+    },
+    "U_data_V_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "U_data_V_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "U_data_V_address1": {
+      "dir": "out",
+      "width": "21"
+    },
+    "U_data_V_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "U_data_V_d1": {
+      "dir": "out",
+      "width": "8"
+    },
+    "U_data_V_q1": {
+      "dir": "in",
+      "width": "8"
+    },
+    "U_data_V_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "V_allocatedFlag": {
+      "dir": "in",
+      "width": "8"
+    },
+    "V_rows": {
+      "dir": "in",
+      "width": "32"
+    },
+    "V_cols": {
+      "dir": "in",
+      "width": "32"
+    },
+    "V_size": {
+      "dir": "in",
+      "width": "32"
+    },
+    "V_data_V_address0": {
+      "dir": "out",
+      "width": "21"
+    },
+    "V_data_V_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "V_data_V_d0": {
+      "dir": "out",
+      "width": "8"
+    },
+    "V_data_V_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "V_data_V_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "V_data_V_address1": {
+      "dir": "out",
+      "width": "21"
+    },
+    "V_data_V_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "V_data_V_d1": {
+      "dir": "out",
+      "width": "8"
+    },
+    "V_data_V_q1": {
+      "dir": "in",
+      "width": "8"
+    },
+    "V_data_V_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "UV_allocatedFlag": {
+      "dir": "in",
+      "width": "8"
+    },
+    "UV_rows": {
+      "dir": "in",
+      "width": "32"
+    },
+    "UV_cols": {
+      "dir": "in",
+      "width": "32"
+    },
+    "UV_size": {
+      "dir": "in",
+      "width": "32"
+    },
+    "UV_data_V_address0": {
+      "dir": "out",
+      "width": "21"
+    },
+    "UV_data_V_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "UV_data_V_d0": {
+      "dir": "out",
+      "width": "16"
+    },
+    "UV_data_V_q0": {
+      "dir": "in",
+      "width": "16"
+    },
+    "UV_data_V_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "UV_data_V_address1": {
+      "dir": "out",
+      "width": "21"
+    },
+    "UV_data_V_ce1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "UV_data_V_d1": {
+      "dir": "out",
+      "width": "16"
+    },
+    "UV_data_V_q1": {
+      "dir": "in",
+      "width": "16"
+    },
+    "UV_data_V_we1": {
+      "dir": "out",
+      "width": "1"
+    },
+    "mode": {
+      "dir": "in",
+      "width": "8"
+    },
+    "sat": {
+      "dir": "in",
+      "width": "32"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "sat_ctrl_accel",
+      "Instances": [
+        {
+          "ModuleName": "mat_combine_uv",
+          "InstanceName": "mat_combine_uv_U0"
+        },
+        {
+          "ModuleName": "meanStdDev",
+          "InstanceName": "meanStdDev_U0"
+        },
+        {
+          "ModuleName": "Loop_1_proc",
+          "InstanceName": "Loop_1_proc_U0"
+        },
+        {
+          "ModuleName": "xFMagnitudeKernel",
+          "InstanceName": "xFMagnitudeKernel_U0"
+        },
+        {
+          "ModuleName": "convertTo",
+          "InstanceName": "convertTo_U0"
+        },
+        {
+          "ModuleName": "sat_ctrl_accel_entry_1",
+          "InstanceName": "sat_ctrl_accel_entry_1_U0"
+        },
+        {
+          "ModuleName": "sat_ctrl_accel_entry_1_1",
+          "InstanceName": "sat_ctrl_accel_entry_1_1_U0"
+        }
+      ]
+    },
+    "Info": {
+      "sat_ctrl_accel_entry_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "sat_ctrl_accel_entry_1_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "Loop_1_proc": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "xFMagnitudeKernel": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "convertTo": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "meanStdDev": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "mat_combine_uv": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "sat_ctrl_accel": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "sat_ctrl_accel_entry_1": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "1.838"
+        },
+        "Area": {
+          "FF": "3",
+          "LUT": "38",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "sat_ctrl_accel_entry_1_1": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "3.676"
+        },
+        "Area": {
+          "FF": "3",
+          "LUT": "56",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "Loop_1_proc": {
+        "Latency": {
+          "LatencyBest": "4149361",
+          "LatencyAvg": "4149361",
+          "LatencyWorst": "4149361",
+          "PipelineII": "4149361",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "3.410"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "1080",
+            "Latency": "4149360",
+            "PipelineII": "",
+            "PipelineDepth": "3842",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "1920",
+                "Latency": "3840",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
+          }],
+        "Area": {
+          "FF": "66",
+          "LUT": "225",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "xFMagnitudeKernel": {
+        "Latency": {
+          "LatencyBest": "2076841",
+          "LatencyAvg": "2076841",
+          "LatencyWorst": "2076841",
+          "PipelineII": "2076841",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "5.217"
+        },
+        "Loops": [{
+            "Name": "rowLoop",
+            "TripCount": "1080",
+            "Latency": "2076840",
+            "PipelineII": "",
+            "PipelineDepth": "1923",
+            "Loops": [{
+                "Name": "colLoop",
+                "TripCount": "1920",
+                "Latency": "1920",
+                "PipelineII": "1",
+                "PipelineDepth": "2"
+              }]
+          }],
+        "Area": {
+          "FF": "42",
+          "LUT": "244",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "convertTo": {
+        "Latency": {
+          "LatencyBest": "2076841",
+          "LatencyAvg": "2076841",
+          "LatencyWorst": "2076841",
+          "PipelineII": "2076841",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "4.918"
+        },
+        "Loops": [{
+            "Name": "ROW_LOOP",
+            "TripCount": "1080",
+            "Latency": "2076840",
+            "PipelineII": "",
+            "PipelineDepth": "1923",
+            "Loops": [{
+                "Name": "COL_LOOP",
+                "TripCount": "1920",
+                "Latency": "1920",
+                "PipelineII": "1",
+                "PipelineDepth": "2"
+              }]
+          }],
+        "Area": {
+          "FF": "64",
+          "LUT": "194",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "meanStdDev": {
+        "Latency": {
+          "LatencyBest": "2076841",
+          "LatencyAvg": "2076841",
+          "LatencyWorst": "2076841",
+          "PipelineII": "2076841",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "5.027"
+        },
+        "Loops": [{
+            "Name": "Row_Loop1",
+            "TripCount": "1080",
+            "Latency": "2076840",
+            "PipelineII": "",
+            "PipelineDepth": "1923",
+            "Loops": [{
+                "Name": "Col_Loop1",
+                "TripCount": "1920",
+                "Latency": "1920",
+                "PipelineII": "1",
+                "PipelineDepth": "2"
+              }]
+          }],
+        "Area": {
+          "DSP48E": "1",
+          "FF": "186",
+          "LUT": "250",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "mat_combine_uv": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "3.420"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": "",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "",
+                "Latency": "",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
+          }],
+        "Area": {
+          "DSP48E": "3",
+          "FF": "225",
+          "LUT": "260",
+          "BRAM_18K": "0",
+          "URAM": "0"
+        }
+      },
+      "sat_ctrl_accel": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "dataflow"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "5.217"
+        },
+        "Area": {
+          "BRAM_18K": "4182",
+          "DSP48E": "4",
+          "FF": "108737",
+          "LUT": "401217",
+          "URAM": "0"
+        }
+      }
+    }
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "sat_ctrl_accel",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2020-10-23 23:04:15 +0800",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2019.2"
+  }
+}

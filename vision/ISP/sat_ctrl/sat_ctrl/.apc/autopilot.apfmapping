@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="xf_sat_ctrl_accel.cpp" path="D:\github\ISP_HLS\vision\ISP\sat_ctrl\xf_sat_ctrl_accel.cpp"/>
+    <originFiles name="xf_sat_ctrl_config.h" path="D:\github\ISP_HLS\vision\ISP\sat_ctrl\xf_sat_ctrl_config.h"/>
+  </source>
+  <testbench>
+    <originFiles name="xf_sat_ctrl_accel_tb.cpp" path="D:\github\ISP_HLS\vision\ISP\sat_ctrl\xf_sat_ctrl_accel_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

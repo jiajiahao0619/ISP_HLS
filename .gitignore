@@ -8,5 +8,11 @@
 /vision/ISP/gamma_correction/gamma_correction/soluti*/csim/*
 /vision/ISP/gamma_correction/*.bak
 /vision/ISP/gamma_correction/*.log
+/vision/ISP/sat_ctrl/sat_ctrl/soluti*/.autopilot/*
+/vision/ISP/sat_ctrl/sat_ctrl/soluti*/impl/*
+/vision/ISP/sat_ctrl/sat_ctrl/soluti*/syn/*
+/vision/ISP/sat_ctrl/sat_ctrl/soluti*/csim/*
+/vision/ISP/sat_ctrl/*.bak
+/vision/ISP/sat_ctrl/*.log
 
 
