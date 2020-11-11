@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'resize_accel/p_dst_size' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="resize" solutionName="solution1" date="2020-11-10T15:31:23.667+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'resize_accel/p_dst_allocatedFlag' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="resize" solutionName="solution1" date="2020-11-10T15:31:23.635+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'resize_accel/p_src_size' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="resize" solutionName="solution1" date="2020-11-10T15:31:23.606+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'resize_accel/p_src_allocatedFlag' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="resize" solutionName="solution1" date="2020-11-10T15:31:23.552+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 1, 2>' to 'resizeNNBilinear' (../../L1/include/.\imgproc/xf_resize_nn_bilinear.hpp:47:17)" projectName="resize" solutionName="solution1" date="2020-11-10T15:31:12.272+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'scaleCompute&lt;17, 42, 20, 48, 16, 1>' to 'scaleCompute' (../../L1/include/.\imgproc/xf_resize_nn_bilinear.hpp:192:1)" projectName="resize" solutionName="solution1" date="2020-11-10T15:31:12.005+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'xf::cv::resize&lt;1, 9, 1080, 1920, 640, 640, 1, 2>' to 'resize' (../../L1/include/.\imgproc/xf_resize.hpp:63:1)" projectName="resize" solutionName="solution1" date="2020-11-10T15:31:11.981+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (../../L1/include/.\imgproc/xf_resize_nn_bilinear.hpp:380:19) in function 'resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 1, 2>' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop." projectName="resize" solutionName="solution1" date="2020-11-10T15:31:11.961+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 2 for loop 'Loop-1' (../../L1/include/.\imgproc/xf_resize_nn_bilinear.hpp:334:1) in function 'resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 1, 2>'." projectName="resize" solutionName="solution1" date="2020-11-10T15:31:09.860+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignore pipeline pragma in Loop whose tripcount is only 1 (../../L1/include/.\imgproc/xf_resize_nn_bilinear.hpp:172) in function 'resizeNNBilinear&lt;9, 1080, 1920, 1, 640, 640, 1, 2>'." projectName="resize" solutionName="solution1" date="2020-11-10T15:31:09.698+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] ../../L1/include/.\imgproc/xf_resize_nn_bilinear.hpp:144: variable-indexed range selection may cause suboptimal QoR." projectName="resize" solutionName="solution1" date="2020-11-10T15:31:08.965+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from xf_resize_accel.cpp:1:&#xD;&#xA;In file included from xf_resize_accel.cpp:17:&#xD;&#xA;In file included from ./xf_resize_config.h:22:&#xD;&#xA;In file included from ../../L1/include/.\common/xf_common.hpp:20:&#xD;&#xA;../../L1/include/.\common/xf_structs.hpp:442:33: warning: unknown attribute 'xcl_array_geometry' ignored [-Wattributes]&#xD;&#xA;    DATATYPE* data __attribute((xcl_array_geometry(&#xD;&#xA;                                ^&#xD;&#xA;1 warning generated." projectName="resize" solutionName="solution1" date="2020-11-10T15:31:05.422+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

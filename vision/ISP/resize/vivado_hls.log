@@ -1,0 +1,68 @@
+INFO: [HLS 200-10] Running 'E:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'jiaz' on host 'laptop-438fv7dh' (Windows NT_amd64 version 6.2) on Tue Nov 10 15:33:53 +0800 2020
+INFO: [HLS 200-10] In directory 'D:/github/ISP_HLS/vision/ISP/resize'
+Sourcing Tcl script 'D:/github/ISP_HLS/vision/ISP/resize/resize/solution1/csim.tcl'
+INFO: [HLS 200-10] Opening project 'D:/github/ISP_HLS/vision/ISP/resize/resize'.
+INFO: [HLS 200-10] Opening solution 'D:/github/ISP_HLS/vision/ISP/resize/resize/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../xf_resize_tb.cpp in debug mode
+   Compiling ../../../../xf_resize_accel.cpp in debug mode
+   Generating csim.exe
+In file included from E:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from E:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186,
+                 from E:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from E:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from E:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from E:/Xilinx/Vivado/2019.2/include/ap_int.h:54,
+                 from ../../../../../../L1/include/common/xf_types.hpp:24,
+                 from ../../../../../../L1/include/common/xf_structs.hpp:30,
+                 from ../../../../../../L1/include/common/xf_common.hpp:20,
+                 from ../../../../../../L1/include/common/xf_sw_utils.hpp:20,
+                 from ../../../../../../L1/include/common/xf_headers.hpp:30,
+                 from ../../../../xf_resize_tb.cpp:17:
+E:/Xilinx/Vivado/2019.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from E:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186:0,
+                 from E:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from E:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from E:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from E:/Xilinx/Vivado/2019.2/include/ap_int.h:54,
+                 from ../../../../../../L1/include/common/xf_types.hpp:24,
+                 from ../../../../../../L1/include/common/xf_structs.hpp:30,
+                 from ../../../../../../L1/include/common/xf_common.hpp:20,
+                 from ../../../../../../L1/include/common/xf_sw_utils.hpp:20,
+                 from ../../../../../../L1/include/common/xf_headers.hpp:30,
+                 from ../../../../xf_resize_tb.cpp:17:
+E:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from E:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from E:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186,
+                 from E:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from E:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from E:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from E:/Xilinx/Vivado/2019.2/include/ap_int.h:54,
+                 from ../../../../xf_resize_config.h:21,
+                 from ../../../../xf_resize_accel.cpp:17:
+E:/Xilinx/Vivado/2019.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from E:/Xilinx/Vivado/2019.2/include/hls_fpo.h:186:0,
+                 from E:/Xilinx/Vivado/2019.2/include/hls_half.h:44,
+                 from E:/Xilinx/Vivado/2019.2/include/etc/ap_private.h:90,
+                 from E:/Xilinx/Vivado/2019.2/include/ap_common.h:641,
+                 from E:/Xilinx/Vivado/2019.2/include/ap_int.h:54,
+                 from ../../../../xf_resize_config.h:21,
+                 from ../../../../xf_resize_accel.cpp:17:
+E:/Xilinx/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+Minimum error in intensity = 0.000000
+Maximum error in intensity = 1.000000
+Percentage of pixels above error threshold = 0.000000
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

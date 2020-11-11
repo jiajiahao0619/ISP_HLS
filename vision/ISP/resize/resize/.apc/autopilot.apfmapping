@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="xf_resize_accel.cpp" path="D:\github\ISP_HLS\vision\ISP\resize\xf_resize_accel.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="xf_resize_tb.cpp" path="D:\github\ISP_HLS\vision\ISP\resize\xf_resize_tb.cpp"/>
+    <originFiles name="xf_resize_config.h" path="D:\github\ISP_HLS\vision\ISP\resize\xf_resize_config.h"/>
+    <originFiles name="4k.jpg" path="D:\github\ISP_HLS\vision\ISP\resize\4k.jpg"/>
+    <originFiles name="128x128.png" path="D:\github\ISP_HLS\vision\ISP\resize\128x128.png"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

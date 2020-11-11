@@ -50,26 +50,26 @@ void sat_ctrl_accel(xf::cv::Mat<XF_8UC1, HEIGHT, WIDTH, NPC>& U,
                     unsigned char mode,
                     int sat)
 {
-#pragma HLS DATAFLOW
+//#pragma HLS DATAFLOW
     //8UC1
 	xf::cv::Mat<XF_8UC1,HEIGHT,WIDTH,NPC>u_8u(HEIGHT,WIDTH);
-#pragma HLS ARRAY_MAP variable=u_8u horizontal
+//#pragma HLS ARRAY_MAP variable=u_8u horizontal
 	xf::cv::Mat<XF_8UC1,HEIGHT,WIDTH,NPC>v_8u(HEIGHT,WIDTH);
-#pragma HLS STREAM variable=v_8u dim=1
+//#pragma HLS STREAM variable=v_8u dim=1
     xf::cv::Mat<XF_8UC1,HEIGHT,WIDTH,NPC>uv_8u(HEIGHT,WIDTH);
-#pragma HLS STREAM variable=uv_8u dim=1
+//#pragma HLS STREAM variable=uv_8u dim=1
     //16SC1
 	xf::cv::Mat<XF_16SC1,HEIGHT,WIDTH,NPC>u_16s(HEIGHT,WIDTH);
-#pragma HLS STREAM variable=u_16s dim=1
+//#pragma HLS STREAM variable=u_16s dim=1
 	xf::cv::Mat<XF_16SC1,HEIGHT,WIDTH,NPC>v_16s(HEIGHT,WIDTH);
-#pragma HLS STREAM variable=v_16s dim=1
+//#pragma HLS STREAM variable=v_16s dim=1
     xf::cv::Mat<XF_16SC1,HEIGHT,WIDTH,NPC>uv_16s(HEIGHT,WIDTH);
-#pragma HLS STREAM variable=uv_16s dim=1
+//#pragma HLS STREAM variable=uv_16s dim=1
     //16SC1
 	xf::cv::Mat<XF_32FC1,HEIGHT,WIDTH,NPC>u_32f(HEIGHT,WIDTH);
-#pragma HLS STREAM variable=u_32f dim=1
+//#pragma HLS STREAM variable=u_32f dim=1
 	xf::cv::Mat<XF_32FC1,HEIGHT,WIDTH,NPC>v_32f(HEIGHT,WIDTH);
-#pragma HLS STREAM variable=v_32f dim=1
+//#pragma HLS STREAM variable=v_32f dim=1
     //data type convert
     xf::cv::convertTo<XF_8UC1, XF_16SC1,HEIGHT,WIDTH,NPC>(U,u_16s,XF_CONVERT_8U_TO_16S,0);
     xf::cv::convertTo<XF_8UC1, XF_16SC1,HEIGHT,WIDTH,NPC>(V,v_16s,XF_CONVERT_8U_TO_16S,0);
@@ -88,6 +88,8 @@ void sat_ctrl_accel(xf::cv::Mat<XF_8UC1, HEIGHT, WIDTH, NPC>& U,
         {
             u_16s.data[i*WIDTH+j] = U.data[i*WIDTH+j] - 128;
             v_16s.data[i*WIDTH+j] = V.data[i*WIDTH+j] - 128;
+            u_32f.data[i*WIDTH+j] = u_16s.data[i*WIDTH+j];
+            v_32f.data[i*WIDTH+j] = v_16s.data[i*WIDTH+j];
         }
         
     }
@@ -117,10 +119,10 @@ void sat_ctrl_accel(xf::cv::Mat<XF_8UC1, HEIGHT, WIDTH, NPC>& U,
     {
         for (int j=0; j<WIDTH; j++)
         {
-        	//u_32f.data[i*WIDTH+j] = u_32f.data[i*WIDTH+j]*beta + bias;
-        	//v_32f.data[i*WIDTH+j] = v_32f.data[i*WIDTH+j]*beta + bias;
-        	//u_8u.data[i*WIDTH+j] = (unsigned char) u_32f.data[i*WIDTH+j];
-        	//v_8u.data[i*WIDTH+j] = (unsigned char) v_32f.data[i*WIDTH+j];
+        	u_32f.data[i*WIDTH+j] = u_32f.data[i*WIDTH+j]*beta + bias;
+        	v_32f.data[i*WIDTH+j] = v_32f.data[i*WIDTH+j]*beta + bias;
+        	u_8u.data[i*WIDTH+j] = (unsigned char) u_32f.data[i*WIDTH+j];
+        	v_8u.data[i*WIDTH+j] = (unsigned char) v_32f.data[i*WIDTH+j];
         }        
     }
     mat_combine_uv(u_8u,v_8u,UV);

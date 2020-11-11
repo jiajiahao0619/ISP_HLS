@@ -7,16 +7,17 @@ void mat_split_rgb(xf::cv::Mat<XF_8UC3,HEIGHT,WIDTH,NPC> &_src,
                    xf::cv::Mat<XF_8UC1,HEIGHT,WIDTH,NPC> &_g,
                    xf::cv::Mat<XF_8UC1,HEIGHT,WIDTH,NPC> &_b)
 {
+#pragma HLS DATAFLOW
     ap_uint<24 * NPC> din;
     ap_uint<8*NPC> r, g, b;
     #pragma HLS INLINE
     mat_split_x:
-    for(int x=0; x< _src.rows; x++){
+    for(int x=0; x< HEIGHT; x++){
         
         mat_split_y:
-        for(int y=0; y< (_src.cols >>XF_BITSHIFT(NPC)); y++ ){
+        for(int y=0; y< (WIDTH >>XF_BITSHIFT(NPC)); y++ ){
 #pragma HLS PIPELINE
-            din = _src.read(x*(_src.cols >> XF_BITSHIFT(NPC))+y);
+            din = _src.read(x*(WIDTH >> XF_BITSHIFT(NPC))+y);
             mat_split_i:
             for(int i=0; i < (1 <<XF_BITSHIFT(NPC));i++ ){
 #pragma HLS UNROLL
@@ -25,9 +26,9 @@ void mat_split_rgb(xf::cv::Mat<XF_8UC3,HEIGHT,WIDTH,NPC> &_src,
                 g(i * 8 + 7, i * 8) = din.range(15 + i * 24, 8 + i * 24);
                 r(i * 8 + 7, i * 8) = din.range(7 + i * 24, 0+ i*24);    
             }
-            _b.write((x * (_src.cols >> XF_BITSHIFT(NPC)) + y),b);
-            _g.write((x * (_src.cols >> XF_BITSHIFT(NPC)) + y),g);
-            _r.write((x * (_src.cols >> XF_BITSHIFT(NPC)) + y),r);
+            _b.write((x * (WIDTH >> XF_BITSHIFT(NPC)) + y),b);
+            _g.write((x * (WIDTH >> XF_BITSHIFT(NPC)) + y),g);
+            _r.write((x * (WIDTH >> XF_BITSHIFT(NPC)) + y),r);
         }
         
     }        
@@ -39,17 +40,18 @@ void mat_combin_rgb( float r_gain, float g_gain, float b_gain,
                      xf::cv::Mat<XF_8UC1,HEIGHT,WIDTH,NPC> &_b,
                      xf::cv::Mat<XF_8UC3,HEIGHT,WIDTH,NPC> &_dest)  
 {
+#pragma HLS DATAFLOW
     float rg,gg,bg;
     ap_uint<24 * NPC> dout;
     ap_uint<8 * NPC> r, g, b;
     float rf,gf,bf;
     rg = r_gain; gg = g_gain; bg = b_gain;
-    for(int x=0; x< _dest.rows; x++){
+    for(int x=0; x< HEIGHT; x++){
         
-        for(int y = 0; y<(_dest.cols >> XF_BITSHIFT(NPC)); y++){
-            b = _b.read(x * (_dest.cols >> XF_BITSHIFT(NPC)) +y);    
-            g = _g.read(x * (_dest.cols >> XF_BITSHIFT(NPC)) +y);    
-            r = _r.read(x * (_dest.cols >> XF_BITSHIFT(NPC)) +y);    
+        for(int y = 0; y<(WIDTH >> XF_BITSHIFT(NPC)); y++){
+            b = _b.read(x * (WIDTH >> XF_BITSHIFT(NPC)) +y);
+            g = _g.read(x * (WIDTH >> XF_BITSHIFT(NPC)) +y);
+            r = _r.read(x * (WIDTH >> XF_BITSHIFT(NPC)) +y);
             
             for(int i = 0; i< (1 << XF_BITSHIFT(NPC));i++){
                 bf = (float) b(i * 8 + 7, i * 8);
@@ -59,7 +61,7 @@ void mat_combin_rgb( float r_gain, float g_gain, float b_gain,
                 dout(23 + i*24, i * 24)=
                     (ap_uint<8>(bf + bg),ap_uint<8>(gf + gg),ap_uint<8>(rf + rg));
             }
-            _dest.write((x * (_dest.cols >> XF_BITSHIFT(NPC)) + y), dout);
+            _dest.write((x * (WIDTH >> XF_BITSHIFT(NPC)) + y), dout);
         }    
     }    
 }
